@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboardList, faDollarSign, faUserCheck } from "@fortawesome/free-solid-svg-icons";
 
 function PageContent () {
+    fetch('http://localhost:3000/api/products')
+        .then(Response => Response.json())
+        .then(json => console.log(json))
     return (
         /** Content Row */
         <div className='row'>
