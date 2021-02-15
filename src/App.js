@@ -6,10 +6,17 @@ import 'typeface-nunito'
 import PageContent from './components/PageContent';
 import PageContent2 from './components/PageContent2';
 import Table from './components/Table';
+import Home from './components/Home';
+import axios from "axios";
 
 function App() {
+/*   fetch('http://localhost:3000/api/products')
+  .then(Response => Response.json())
+  .then(products => console.log(products)) */
+
   return (
     <div id="wrapper">
+      <Home />
       <NavBar />
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
