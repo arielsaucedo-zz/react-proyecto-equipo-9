@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboardList, faDollarSign, faUserCheck } from "@fortawesome/free-solid-svg-icons";
 
-class CardProducts extends Component {
+class CardCategories extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -16,23 +16,23 @@ class CardProducts extends Component {
         .then(result=>result.json())
         .then(items=>this.setState({
             done: true,
-            items
+            items 
         }))
     }
 
     render() {
         return(
-            <div className='card border-left-primary shadow h-100 py-2'>
+            <div className='card border-left-success shadow h-100 py-2'>
                 <div className='card-body'>
                     <div className=''>
                         <div className='col mr-2'>
-                            <div className='text-xs font-weight-bold text-primary text-uppercase mb-1'>
-                                Products in Data Base
+                            <div className='text-xs font-weight-bold text-success text-uppercase mb-1'>
+                                Categories in Data Base
                             </div>
                             <div className="h5 mb-0 font-weight-bold text-gray-800">
                                 {   
                                     this.state.done  ? (
-                                    this.state.items.meta.count
+                                    this.state.items.meta.countByCategory.length
                                     ) : (
                                         <p>Cargando resultados...</p>
                                     )
@@ -49,4 +49,4 @@ class CardProducts extends Component {
     }
 }
 
-export default CardProducts
+export default CardCategories

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboardList, faDollarSign, faUserCheck } from "@fortawesome/free-solid-svg-icons";
 
-class CardProducts extends Component {
+class CardUsers extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -12,7 +12,7 @@ class CardProducts extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/api/products')
+        fetch('http://localhost:3000/api/users')
         .then(result=>result.json())
         .then(items=>this.setState({
             done: true,
@@ -26,8 +26,8 @@ class CardProducts extends Component {
                 <div className='card-body'>
                     <div className=''>
                         <div className='col mr-2'>
-                            <div className='text-xs font-weight-bold text-primary text-uppercase mb-1'>
-                                Products in Data Base
+                            <div className='text-xs font-weight-bold text-warning text-uppercase mb-1'>
+                                Users Quantity
                             </div>
                             <div className="h5 mb-0 font-weight-bold text-gray-800">
                                 {   
@@ -40,7 +40,7 @@ class CardProducts extends Component {
                             </div>
                         </div>
                         <div className='col-auto'>
-                            <i className='fas fa-2x text-gray-300'><FontAwesomeIcon icon={faClipboardList} /></i>
+                            <i className='fas fa-2x text-gray-300'><FontAwesomeIcon icon={faUserCheck} /></i>
                         </div> 
                     </div>
                 </div>
@@ -49,4 +49,4 @@ class CardProducts extends Component {
     }
 }
 
-export default CardProducts
+export default CardUsers

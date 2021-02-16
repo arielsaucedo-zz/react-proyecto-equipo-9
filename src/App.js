@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div id="wrapper">
-      <Home />
+      {/* <Home /> */}
       <NavBar />
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
