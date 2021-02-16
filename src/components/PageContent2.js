@@ -1,4 +1,5 @@
 import React from 'react'
+import ListOfCategories from './ListOfCategories'
 import dummyProduct from './product_dummy.svg'
 import SmallCard from './SmallCard'
 
@@ -23,54 +24,7 @@ function PageContent2 () {
             </div>
 
             {/**Categories in DB */}
-            <div className="col-lg-6 mb-4">						
-                <div className="card shadow mb-4">
-                    <div className="card-header py-3">
-                        <h6 className="m-0 font-weight-bold text-primary">Categories in Data Base</h6>
-                    </div>
-                    <div className="card-body">
-                        <div className="row">
-                            <SmallCard
-                                claseSmCard='col-lg-6 mb-4'
-                                claseSmCard2='card bg-info text-white shadow'
-                                claseSmCardBody='card-body'
-                                smCardTxt='Category 01'
-                            />
-                            <SmallCard
-                                claseSmCard='col-lg-6 mb-4'
-                                claseSmCard2='card bg-info text-white shadow'
-                                claseSmCardBody='card-body'
-                                smCardTxt='Category 02'
-                            />
-                            <SmallCard
-                                claseSmCard='col-lg-6 mb-4'
-                                claseSmCard2='card bg-info text-white shadow'
-                                claseSmCardBody='card-body'
-                                smCardTxt='Category 03'
-                            />
-                            <SmallCard
-                                claseSmCard='col-lg-6 mb-4'
-                                claseSmCard2='card bg-info text-white shadow'
-                                claseSmCardBody='card-body'
-                                smCardTxt='Category 04'
-                            />
-                            <SmallCard
-                                claseSmCard='col-lg-6 mb-4'
-                                claseSmCard2='card bg-info text-white shadow'
-                                claseSmCardBody='card-body'
-                                smCardTxt='Category 05'
-                            />
-                            <SmallCard
-                                claseSmCard='col-lg-6 mb-4'
-                                claseSmCard2='card bg-info text-white shadow'
-                                claseSmCardBody='card-body'
-                                smCardTxt='Category 06'
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+            <ListOfCategories />
         </div>
     )
 }
