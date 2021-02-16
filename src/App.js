@@ -6,14 +6,11 @@ import 'typeface-nunito'
 import PageContent from './components/PageContent';
 import PageContent2 from './components/PageContent2';
 import Table from './components/Table';
-import Home from './components/Home';
 import axios from "axios";
 
 function App() {
   return (
     <div id="wrapper">
-      {/* <Home /> */}
-      <NavBar />
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
           <TopBar />
@@ -25,7 +22,7 @@ function App() {
             <PageContent />
             <PageContent2 />
             {/**PRODUCTS LIST */}
-            <h1 className="h3 mb-2 text-gray-800">All the products in the Database</h1>
+            <h1 className="h3 my-4 text-gray-800">All the products in the Database</h1>
             <Table />
           </div>
         </div>

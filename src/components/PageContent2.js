@@ -10,7 +10,7 @@ function PageContent2 () {
             {/**Categories in DB */}
             <ListOfCategories />
             
-            <div className='col-lg-9 mh-100 my-auto'>
+            <div className='h-100 mb-4 col-lg-8'>
                 {/** Last Product in DB */}
                 <LastProductDB />
 
