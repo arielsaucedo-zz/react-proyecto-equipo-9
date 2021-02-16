@@ -10,10 +10,6 @@ import Home from './components/Home';
 import axios from "axios";
 
 function App() {
-/*   fetch('http://localhost:3000/api/products')
-  .then(Response => Response.json())
-  .then(products => console.log(products)) */
-
   return (
     <div id="wrapper">
       {/* <Home /> */}

@@ -1,31 +1,46 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-function Trecords (props) {
-    return(
-        <tbody>
-            {props.records.map((rec,i) => {
-            return <tr key= {'tr' + i}>
-                <td key= {rec.Name + i} >{rec.Name}</td>
-                <td key= {rec.Description + i} >{rec.Description}</td>
-                <td key= {rec.Price + i} >{rec.Price}</td>
-                <td>
-                    <ul>
-                        {rec.Categories.map((cate,i) => {
-                            return <li key= {cate + i} >{cate}</li>
-                        })}
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        {rec.Colors.map((color,i) => {
-                            return <li key= {color.colorName + i} ><span key={color.colorName + i} className={color.colorClase}>{color.colorName}</span></li>
-                        })}
-                    </ul>
-                </td>
-                <td>{rec.Stock}</td>
-            </tr>
-            })}
+class Trecords extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            done: false,
+            items: []
+        };
+    }
+
+    componentDidMount() {
+        fetch('http://localhost:3000/api/products/extra')
+        .then(result=>result.json())
+        .then(items=>this.setState({
+            done: true,
+            items
+        }))
+    }
+
+    render() {
+        return(
+            <tbody>
+            {
+            this.state.done ? (
+                this.state.items.data.map((item, i) => {
+                    return <tr key= {'tr' + i}>
+                        <td key= {item.name + i} >{item.name}</td>
+                        <td key= {item.description + i} >{item.description}</td>
+                        <td key= {item.quantity + i} >{item.quantity}</td>
+                        <td key= {item.price + i} >${item.price}</td>
+                        <td key= {item.discount + i} >{item.discount}%</td>
+                        <td key= {item.Category.name + i} >{item.Category.name}</td>
+                    </tr>
+                })
+                ) : (
+                    <p>Cargando resultados...</p>
+                 )
+            }
         </tbody>
-    )
+        )
+    }
 }
+
 export default Trecords
+

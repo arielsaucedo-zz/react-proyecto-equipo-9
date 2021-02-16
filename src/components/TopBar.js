@@ -3,7 +3,7 @@ import NavItem from './NavItem'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
-import dummyAvatar from './dummy-avatar.jpg'
+import dummyAvatar from './avatar-default.jpg'
 
 function TopBar () {
     return (
@@ -49,7 +49,7 @@ function TopBar () {
                     claseA='nav-link dropdown-toggle'
                     idA='userDropdown'
                     claseSpan='mr-2 d-none d-lg-inline text-gray-600 small'
-                    contenidoSpan='Walter White'
+                    contenidoSpan='Administador'
                     claseImg='img-profile rounded-circle'
                     SrcImg={dummyAvatar}
                     wImg='60'
