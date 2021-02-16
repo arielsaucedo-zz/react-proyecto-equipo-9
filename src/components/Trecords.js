@@ -10,7 +10,7 @@ class Trecords extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/api/products/extra')
+        fetch('http://localhost:3000/api/productsExtra/')
         .then(result=>result.json())
         .then(items=>this.setState({
             done: true,
