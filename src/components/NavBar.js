@@ -10,10 +10,6 @@ function NavBar(){
 			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
 
             <img className="w-25" src="/images/kalitero-logo-k-wht.png" alt="Logo - Kalítero" />
-				{/* <div className="sidebar-brand-icon">
-                    <i className='fas fa-chart-line'><FontAwesomeIcon icon={faChartLine} /></i>
-				</div>
-				<div className="sidebar-brand-text mx-3">Admin</div> */}
 			</a>
             
             {/* Divider */}
