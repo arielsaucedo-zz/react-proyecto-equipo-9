@@ -25,7 +25,7 @@ class LastProductDB extends Component {
                      this.state.done ? (
                         <div className="card shadow h-100 mb-4">
                             <div className="card-header py-3">
-                                <h6 className="m-0 font-weight-bold text-primary">Last product in Data Dase: {this.state.item.data.name}</h6>
+                                <h6 className="m-0 font-weight-bold text-primary">Last product in Data Base: {this.state.item.data.name}</h6>
                             </div>
                             <div className="card-body">
                                 <div className="text-center">
