@@ -11,6 +11,7 @@ import axios from "axios";
 function App() {
   return (
     <div id="wrapper">
+      {/** Blue NavBar */}
       <NavBar />
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
