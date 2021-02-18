@@ -2,6 +2,8 @@ import React from 'react'
 import CardProducts from './CardProducts';
 import CardUsers from './CardUsers';
 import CardCategories from './CardCategories';
+import CardSales from './CardSales';
+import CardSoldProducts from './CardSoldProducts';
 
 function PageContent () {
     return (
@@ -18,6 +20,14 @@ function PageContent () {
 
             <div className="col-md-4 mb-4">
                 <CardUsers />
+            </div>
+
+            <div className="col-md-4 mb-4">
+                <CardSales />
+            </div>
+
+            <div className="col-md-4 mb-4">
+                <CardSoldProducts />
             </div>
         </div>
     )
