@@ -16,7 +16,7 @@ import dummyAvatar from './avatar-default.jpg'
 
             {/**<!-- Topbar Navbar --> */}
             <ul className="navbar-nav ml-auto">
-                <NavItem 
+                {/* <NavItem 
                     claseLi='nav-item dropdown no-arrow mx-1'
                     claseA='nav-link dropdown-toggle'
                     idA='alertsDropdown'
@@ -27,10 +27,10 @@ import dummyAvatar from './avatar-default.jpg'
                     SrcImg=''
                     wImg=''
                     Link='/'
-                />
+                /> */}
 
                 {/**<!-- Nav Item - Messages --> */}
-                <NavItem 
+               {/*  <NavItem 
                     claseLi='nav-item dropdown no-arrow mx-1'
                     claseA='nav-link dropdown-toggle'
                     idA='messagesDropdown'
@@ -41,7 +41,7 @@ import dummyAvatar from './avatar-default.jpg'
                     SrcImg=''
                     wImg=''
                     Link='/'
-                />
+                /> */}
 
                 <div className="topbar-divider d-none d-sm-block"></div>
 
