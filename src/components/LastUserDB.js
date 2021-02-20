@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class LastProductDB extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ class LastProductDB extends Component {
                                     <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 400}} src={this.state.item.data.image} alt=""/>
                                 </div>
                                 <p>{this.state.item.data.description}</p>
-                                <a target="_blank" rel="nofollow" href={this.state.item.data.detail}>View product detail</a>
+                                <Link to={`/users/${this.state.item.data.id}`}> View product detail </Link>
                             </div>
                         </div>
                     ) : (
