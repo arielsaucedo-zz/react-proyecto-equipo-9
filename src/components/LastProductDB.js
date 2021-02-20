@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 
 class LastProductDB extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
             done: false,
             items: []
         };
     }
+
 
     componentDidMount() {
         fetch('http://localhost:3000/api/productsExtra/lastProductDB')
@@ -26,7 +27,7 @@ class LastProductDB extends Component {
                      this.state.done ? (
                         <div className="card shadow h-100 mb-4">
                             <div className="card-header py-3">
-                                <h6 className="m-0 font-weight-bold text-primary">Last product in Data Base: {this.state.item.data.product.name}</h6>
+                                <h6 className="m-0 font-weight-bold text-primary">Last product in Data Base: <span className='text-dark'>{this.state.item.data.product.name}</span></h6>
                             </div>
                             <div className="card-body">
                                 <div className="text-center">

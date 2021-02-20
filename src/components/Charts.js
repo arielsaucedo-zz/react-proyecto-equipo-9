@@ -3,8 +3,8 @@ import Footer from './Footer';
 import NavBar from './NavBar';
 import TopBar from './TopBar';
 import 'typeface-nunito'
-import PageContent from './PageContent';
-import PageContent2 from './PageContent2';
+import ChartsToShow from './ChartsToShow';
+
 
 function Home() {
   return (
@@ -19,8 +19,10 @@ function Home() {
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
             </div>
-            <PageContent />
-            <PageContent2 />
+            <hr></hr>
+            {/**PRODUCTS LIST */}
+            <h1 className="h3 my-4 text-gray-800">Charts</h1>
+            <ChartsToShow />
           </div>
         </div>
         <Footer />

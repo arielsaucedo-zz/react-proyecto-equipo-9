@@ -27,24 +27,27 @@ function LastUserDetailDB () {
         .then(json => {setUser(json)})
     }, [])
 
-    console.log(user)
 
     return (
         <div className="col-lg-12 mb-4">
             <div className="card shadow h-100 mb-4">
                 <div className="card-header py-3">
-                    <h6 className="m-0 font-weight-bold text-primary">Last User detail in Data Base: {user.data.user.first_name} {user.data.user.last_name}</h6>
+                    <h6 className="m-0 font-weight-bold text-primary">Last User detail in Data Base: <span className='text-dark'>{user.data.user.first_name} {user.data.user.last_name}</span></h6>
                 </div>
-                <div className="card-body">
+                <div className="card-body container">
                     <div style={{width: 644}, {height:392}}>
-                        
-                        <p>First Name: {user.data.user.first_name}</p>
 
-                        <p>Last Name: {user.data.user.last_name}</p>
+                        <div className='m-5'>
+                            <h5><strong className='text-primary'><u>First Name:</u> </strong> {user.data.user.first_name}</h5>
 
-                        <p>User Name: {user.data.user.user_name}</p>
-                    
-                        <p>Created Date: {user.data.user.created_at}</p>
+                            <h5><strong className='text-primary'><u>Last Name:</u> </strong> {user.data.user.last_name}</h5>
+
+                            <h5><strong className='text-primary'><u>User Name:</u> </strong> {user.data.user.user_name}</h5>
+
+                            <h5><strong className='text-primary'><u>Created Date:</u> </strong>{user.data.user.created_at}</h5>
+
+                            <h5><strong className='text-primary'><u>Change Date:</u> </strong>{user.data.user.updated_at}</h5>
+                        </div>
                 
                     </div>
                     <br></br>

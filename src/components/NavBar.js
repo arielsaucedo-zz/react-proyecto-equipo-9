@@ -1,16 +1,19 @@
-import React from 'react'
+import {React,} from 'react'
 import NavItem from './NavItem'
+import NavItemExt from './NavItemExt'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChartArea, faChartLine, faTachometerAlt, faFolder, faTable } from "@fortawesome/free-solid-svg-icons";
-
-function NavBar(){
+import { faChartArea, faTachometerAlt, faFolder, faTable } from "@fortawesome/free-solid-svg-icons";
+import {
+    Link,
+  } from "react-router-dom";
+    
+  function NavBar(){
     return (
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             {/*  Sidebar - Brand  */}
-			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-
-            <img className="w-25" src="/images/kalitero-logo-k-wht.png" alt="Logo - Kalítero" />
-			</a>
+            <Link to='/' className="sidebar-brand d-flex align-items-center justify-content-center">
+                <img className="w-25" src="/images/kalitero-logo-k-wht.png" alt="Logo - Kalítero" />
+			</Link>
             
             {/* Divider */}
             <hr className="sidebar-divider my-0"></hr>
@@ -26,6 +29,7 @@ function NavBar(){
                 claseImg=''
                 SrcImg=''
                 wImg=''
+                Link='/'
             />
 
             {/* Divider */}
@@ -35,7 +39,7 @@ function NavBar(){
             <div className="sidebar-heading">Actions</div>
 
             {/* Nav Item - Pages */}
-            <NavItem 
+            <NavItemExt 
                 claseLi='nav-item'
                 claseA='nav-link collapsed'
                 idA=''
@@ -45,6 +49,7 @@ function NavBar(){
                 claseImg=''
                 SrcImg=''
                 wImg=''
+                Link='http://localhost:3000/'
             />
 
             {/* Nav Item - Charts */}
@@ -58,6 +63,7 @@ function NavBar(){
                 claseImg=''
                 SrcImg=''
                 wImg=''
+                Link='/charts'
             />
 
             {/* Nav Item - Tables */}
@@ -71,6 +77,7 @@ function NavBar(){
                 claseImg=''
                 SrcImg=''
                 wImg=''
+                Link='/tables'
             />
 
             {/* Divider */}

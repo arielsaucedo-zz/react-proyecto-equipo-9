@@ -31,26 +31,62 @@ function LastProductDetailDB () {
         .then(json => {setProduct(json)})
     }, [])
 
-    console.log(product)
+    const trunc = (x, posiciones = 0) => {
+        let s = x.toString()
+        let l = s.length
+        let decimalLength = s.indexOf('.') + 1
+  
+        if (l - decimalLength <= posiciones) {
+           return x
+        }
+        // Parte decimal del número
+        let isNeg = x < 0
+        let decimal = x % 1
+        let entera = isNeg ? Math.ceil(x) : Math.floor(x)
+
+        let decimalFormated = Math.floor(
+           Math.abs(decimal) * Math.pow(10, posiciones)
+        )
+
+        
+        let num = 0
+        let finalNum
+        num = x
+        num = num.toString().replace(/\./g,',') //12.6 => 12,6 -------   12000.98 => 12000,98
+        num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g,'$1.'); //89,000.21
+        num = num.split('').reverse().join('').replace(/^[\.]/,''); //12.000,98
+        
+        finalNum = num 
+
+        return finalNum
+    }
 
     return (
         <div className="col-lg-12 mb-4">
             <div className="card shadow h-100 mb-4">
                 <div className="card-header py-3">
-                    <h6 className="m-0 font-weight-bold text-primary">Last product detail in Data Base: {product.data.name}</h6>
+                    <h6 className="m-0 font-weight-bold text-primary">Last product detail in Data Base: <span className='text-dark'>{product.data.name}</span></h6>
                 </div>
-                <div className="card-body">
+                <div className="card-body container">
                     <div style={{width: 644}, {height:392}}>
                         
-                        <p>Description: {product.data.description}</p>
+                        <div className='m-5'>
+                            <h5><strong className='text-primary'><u>Description:</u> </strong> {product.data.description}</h5>
 
-                        <p>Categoryn: {product.data.Category.name}</p>
+                            <h5><strong className='text-primary'><u>Category:</u> </strong> {product.data.Category.name}</h5>
 
-                        <p>Price: {product.data.price}</p>
-                    
-                        <p>Discount: {product.data.discount}</p>
-                    
-                        <p>Created Date: {product.data.created_at}</p>
+                            <h5><strong className='text-primary'><u>List Price:</u> </strong>$ {trunc(product.data.price)}</h5>
+
+                            <h5><strong className='text-primary'><u>Sell Price:</u> </strong>$ {trunc(parseFloat(product.data.price - (product.data.price * product.data.discount /100)).toFixed(2))}</h5>
+
+                            <h5><strong className='text-primary'><u>Discount:</u> </strong>{product.data.discount} %</h5>
+
+                            <h5><strong className='text-primary'><u>Stock:</u> </strong>{product.data.quantity} Un.</h5>
+
+                            <h5><strong className='text-primary'><u>Created Date:</u> </strong>{product.data.created_at}</h5>
+
+                            <h5><strong className='text-primary'><u>Change Date:</u> </strong>{product.data.updated_at}</h5>
+                        </div>
                 
                     </div>
                     <br></br>
