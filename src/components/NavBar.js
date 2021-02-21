@@ -3,9 +3,7 @@ import NavItem from './NavItem'
 import NavItemExt from './NavItemExt'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartArea, faTachometerAlt, faFolder, faTable } from "@fortawesome/free-solid-svg-icons";
-import {
-    Link,
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
     
   function NavBar(){
     return (
@@ -50,20 +48,6 @@ import {
                 SrcImg=''
                 wImg=''
                 Link='http://localhost:3000/'
-            />
-
-            {/* Nav Item - Charts */}
-            <NavItem 
-                claseLi='nav-item'
-                claseA='nav-link'
-                idA=''
-                fontAwe={<FontAwesomeIcon icon={faChartArea} />}
-                claseSpan=''
-                contenidoSpan='Charts'
-                claseImg=''
-                SrcImg=''
-                wImg=''
-                Link='/charts'
             />
 
             {/* Nav Item - Tables */}

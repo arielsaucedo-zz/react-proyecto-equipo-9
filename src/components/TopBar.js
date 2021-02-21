@@ -1,8 +1,7 @@
 import {React,} from 'react'
 import NavItem from './NavItem'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faBell } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import dummyAvatar from './avatar-default.jpg'
 
     function TopBar () {
@@ -16,32 +15,6 @@ import dummyAvatar from './avatar-default.jpg'
 
             {/**<!-- Topbar Navbar --> */}
             <ul className="navbar-nav ml-auto">
-                {/* <NavItem 
-                    claseLi='nav-item dropdown no-arrow mx-1'
-                    claseA='nav-link dropdown-toggle'
-                    idA='alertsDropdown'
-                    fontAwe={<FontAwesomeIcon icon={faBell} />}
-                    claseSpan='badge badge-danger badge-counter'
-                    contenidoSpan='3+'
-                    claseImg=''
-                    SrcImg=''
-                    wImg=''
-                    Link='/'
-                /> */}
-
-                {/**<!-- Nav Item - Messages --> */}
-               {/*  <NavItem 
-                    claseLi='nav-item dropdown no-arrow mx-1'
-                    claseA='nav-link dropdown-toggle'
-                    idA='messagesDropdown'
-                    fontAwe={<FontAwesomeIcon icon={faEnvelope} />}
-                    claseSpan='badge badge-danger badge-counter'
-                    contenidoSpan='7'
-                    claseImg=''
-                    SrcImg=''
-                    wImg=''
-                    Link='/'
-                /> */}
 
                 <div className="topbar-divider d-none d-sm-block"></div>
 

@@ -48,7 +48,6 @@ function LastProductDetailDB () {
            Math.abs(decimal) * Math.pow(10, posiciones)
         )
 
-        
         let num = 0
         let finalNum
         num = x

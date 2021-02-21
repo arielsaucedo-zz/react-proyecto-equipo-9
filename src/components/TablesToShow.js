@@ -3,8 +3,6 @@ import Footer from './Footer';
 import NavBar from './NavBar';
 import TopBar from './TopBar';
 import 'typeface-nunito'
-import PageContent from './PageContent';
-import PageContent2 from './PageContent2';
 import Table from './Table';
 import TableSales from "./TableSales";
 
