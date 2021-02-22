@@ -19,9 +19,7 @@ function PageContent2 () {
                         <Switch>
                             <Route exact path="/">
                                 {/** Last Product in DB */}
-                                <LastProductDB
-                                userId={params.id}
-                                />
+                                <LastProductDB />
                                 {/** Last Product in DB */}
                                 <LastUserDB />
                             </Route>
