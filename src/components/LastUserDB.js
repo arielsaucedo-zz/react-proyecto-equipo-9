@@ -33,7 +33,7 @@ class LastProductDB extends Component {
                                     <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 400}} src={this.state.item.data.image} alt=""/>
                                 </div>
                                 <p>{this.state.item.data.description}</p>
-                                <Link to={`/users/${this.state.item.data.id}`}> View product detail </Link>
+                                <Link to={`/users/${this.state.item.data.id}`}> View user detail </Link>
                             </div>
                         </div>
                     ) : (
